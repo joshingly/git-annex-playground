@@ -23,21 +23,24 @@ Host localtest
 * Clear everything in the coordinator repo folder then do the below on the 
   local server. 
 * git remote rm coordinator
+* gco --orphan new-master master
+* git annex sync
+* gb -M new-master master
+* gb -D synced/new-master
+* gco synced/master
+* git reset --hard master
 * gco git-annex
+* gco --orphan new-git-annex git-annex
+* gr
 * cp *.log ..
-* git rm -r *
+* rm -r *
 * mv ../*.log .
 * gaa
 * gci -m 'update'
-* grb -i --root
-  * Squash into the root commit
+* gb -M new-git-annex git-annex
+* gci -m 'update'
 * Delete synced/git-annex if exists
 * gco master
-* grb -i --root
-  * Squash into the root commit
-* If synced/master exists
-  * gco synced/master
-  * git reset --hard master
 * rm .git/annex/index
 * git annex fsck --fast --jobs 8
 * git annex fsck --fast --from localtest --jobs 8
