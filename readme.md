@@ -7,7 +7,7 @@ Host localtest
   Hostname localhost
   Port 2200
   IdentitiesOnly yes
-  IdentityFile /Users/josh/Sync/Code/play/git-annex/localtest
+  IdentityFile /Users/josh/Sync/Code/git-annex-playground/localtest
 ```
 
 * git annex initremote localtest type=rsync rsyncurl=developer@localtest:Crypt/files encryption=hybrid keyid={YOUR KEY HERE} mac=HMACSHA512
