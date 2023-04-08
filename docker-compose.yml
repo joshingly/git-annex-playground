@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  localtest:
+    tty: true
+    stdin_open: true
+    image: debian-git
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./Crypt:/home/developer/Crypt
+    ports:
+      - '2200:2222'

@@ -1,0 +1,11 @@
+/Crypt/files/*
+!/Crypt/files/.gitkeep
+
+/Crypt/repo/*
+!/Crypt/repo/.gitkeep
+
+/machine-one/*
+!/machine-one/.gitkeep
+
+/machine-two/*
+!/machine-two/.gitkeep
